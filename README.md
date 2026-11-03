@@ -1,6 +1,6 @@
 # SignalMap: conservative org-chart inference
 
-**[Open the live demo](https://org-chart-inference-hy.unitedchub1.chatgpt.site/)**
+**[Open the live demo](https://shai-harsh.github.io/signalmap-org-chart-inference/)**
 
 SignalMap turns an observed flat employee roster into an **inferred forest** of reporting lines. It is deliberately willing to leave gaps: when several managers are equally plausible, a title is uninformative, or calibrated confidence is below 85%, it emits no line. The interactive explorer lets you switch among 500 companies, search the roster, inspect the evidence and walk up the visible reporting chain. All companies and people are fictional.
 
