@@ -71,6 +71,6 @@ AI_WORKFLOW.md            # transparent record of AI-assisted development
 
 Before applying this to real company data, assemble an independently labeled, time-stamped evaluation set with company-disjoint splits and hidden-manager examples. Measure error and coverage by function, region, seniority and company size; recalibrate per data source; detect stale titles and ambiguous entities; and collect reviewer feedback with an auditable source trail. A bounded LLM-assisted title-normalization step could propose a typed function/seniority and explanation, but must support an `unknown` result, caching, versioning, evaluation and human review. It should not invent a manager or replace empirical calibration.
 
-## AI disclosure
+## AI-assisted development
 
-An AI coding assistant was used to implement and review this prototype. The shipped inference is transparent Python rules plus statistical calibration; it does **not** invoke an LLM at runtime. See [AI_WORKFLOW.md](AI_WORKFLOW.md) for the concrete development loop and its limits.
+An AI coding assistant helped bring Harsh Yadav’s idea to life by supporting implementation, refining features, and assisting with testing and documentation.
