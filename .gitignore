@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+data/companies.json
+data/manifest.json
+data/people.jsonl
+data/truth.jsonl
+dist/data/

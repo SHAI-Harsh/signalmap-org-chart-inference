@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore explainable reporting lines from a noisy synthetic employee dataset.">
+  <title>SignalMap — org chart inference</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="#explorer" aria-label="SignalMap home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>signal<span class="brand-light">map</span><small>ORG INTELLIGENCE</small></span></a>
+    <div class="side-label">WORKSPACE</div>
+    <nav class="nav" aria-label="Main navigation">
+      <button class="nav-item active" data-view="explorer"><span class="nav-icon">⌘</span> Org explorer <span class="nav-arrow">↗</span></button>
+      <button class="nav-item" data-view="people"><span class="nav-icon">◫</span> People directory</button>
+      <button class="nav-item" data-view="evaluation"><span class="nav-icon">▥</span> Evaluation</button>
+      <button class="nav-item" data-view="method"><span class="nav-icon">◇</span> Methodology</button>
+    </nav>
+    <div class="sidebar-foot"><div class="foot-icon">✳</div><div><strong>Built on synthetic data</strong><p>Every company and person in this demo is fictional.</p></div></div>
+    <div class="sidebar-bottom"><span class="status-dot"></span> Dataset ready <span class="version">v1.0</span></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><span class="top-icon">✳</span> <span class="muted">Workspace</span><span class="slash">/</span><strong id="breadcrumb">Org explorer</strong></div><span class="demo-badge"><span class="status-dot"></span> SYNTHETIC DEMO</span></header>
+    <div class="content">
+      <section id="workspace-view">
+        <div class="page-intro"><div><div class="eyebrow"><span></span> COMPANY INTELLIGENCE</div><h1 id="page-title">See how teams connect<span class="period">.</span></h1><p>Explore reporting lines inferred from a flat, imperfect people dataset.</p></div><button class="text-link" id="about-link">How this works <span>↗</span></button></div>
+        <section class="company-card" aria-label="Selected company">
+          <div class="company-ident"><div class="company-avatar" id="company-avatar">N</div><div><div class="micro">SELECTED COMPANY</div><h2 id="company-name">Loading companies…</h2><div class="company-meta" id="company-meta"></div></div></div>
+          <div class="company-picker-wrap"><button class="button secondary" id="company-picker" aria-expanded="false">Switch company <span class="chevron">⌄</span></button><div class="company-popover hidden" id="company-popover"><label for="company-search">Find a company</label><input id="company-search" type="search" placeholder="Search 500 companies…" autocomplete="off"><div id="company-options" class="company-options" role="listbox" aria-label="Companies"></div></div></div>
+        </section>
+        <div class="stats" id="stats"></div>
+        <section id="explorer-panel">
+          <div class="section-heading"><div><div class="eyebrow small">THE PEOPLE MAP</div><h2>Reporting structure</h2><p>Click a person to inspect their inferred reporting line.</p></div><div class="legend"><span class="legend-line"></span> Inferred line <span class="legend-dot"></span> Manager unknown</div></div>
+          <div class="panel chart-panel"><div class="panel-toolbar"><div class="toolbar-left"><strong>Org chart</strong><span class="count-pill" id="chart-count">0 people</span></div><div class="toolbar-controls"><div class="search-field"><span>⌕</span><input type="search" id="people-search" aria-label="Search people" placeholder="Search people or titles"></div><label class="threshold-label" for="confidence-filter">Min. confidence</label><select id="confidence-filter"><option value="0.85">85%</option><option value="0.9">90%</option><option value="0.95">95%</option><option value="0.99">99%</option></select></div></div>
+            <div class="chart-layout"><div class="chart-main"><div id="chart" class="chart" aria-live="polite"><div class="empty">Loading the chart…</div></div></div><aside id="person-detail" class="person-detail"><div class="detail-empty"><div class="detail-spark">✳</div><strong>Get the full picture</strong><p>Select a person to see the evidence behind their reporting line.</p></div></aside></div>
+          </div>
+          <p class="below-chart"><span>ⓘ</span> These are inferences, not verified relationships. Missing managers are intentionally left unresolved.</p>
+        </section>
+        <section id="people-panel" class="hidden"><div class="section-heading"><div><div class="eyebrow small">THE FULL ROSTER</div><h2>People directory</h2><p>All observed employees, including people without an inferred manager.</p></div></div><div class="panel"><div class="panel-toolbar"><strong>People <span class="count-pill" id="directory-count"></span></strong><div class="search-field"><span>⌕</span><input type="search" id="directory-search" aria-label="Search directory" placeholder="Search name, title, or function"></div></div><div id="directory" class="directory"></div></div></section>
+      </section>
+      <section id="evaluation-view" class="hidden"></section>
+      <section id="method-view" class="hidden"></section>
+      <footer class="footer"><span>SignalMap <span>·</span> A careful approach to org inference</span><span><a href="https://github.com/SHAI-Harsh/signalmap-org-chart-inference">Source code ↗</a> &nbsp;·&nbsp; Made for the Firmable take-home task</span></footer>
+    </div>
+  </main>
+</div>
+<script src="./app.js" defer></script>
+</body></html>
